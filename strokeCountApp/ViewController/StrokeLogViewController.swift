@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKit
+import Cosmos
 
 class StrokeLogViewController: UIViewController {
 

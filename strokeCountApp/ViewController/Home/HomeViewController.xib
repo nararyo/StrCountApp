@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="strokeCountApp" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="YWL-fb-U1E" id="vz7-NQ-yYf"/>
+                <outlet property="nameTextField" destination="N8P-vH-khe" id="58e-UU-1cC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,23 +20,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="nameCard" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-fb-U1E">
-                    <rect key="frame" x="0.0" y="139" width="375" height="232"/>
+                    <rect key="frame" x="0.0" y="99" width="375" height="232"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-vH-khe">
-                    <rect key="frame" x="28" y="240" width="319" height="60"/>
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-vH-khe">
+                    <rect key="frame" x="40" y="185" width="295" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Mab-ih-NAA"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="0.98112887144088745" green="0.9813883900642395" blue="0.95012694597244263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="N8P-vH-khe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="240" id="EV8-PG-nTi"/>
+                <constraint firstItem="N8P-vH-khe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="FL8-UC-LKd"/>
                 <constraint firstItem="YWL-fb-U1E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FN5-vs-z5D"/>
-                <constraint firstItem="N8P-vH-khe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="c9G-HV-87t"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N8P-vH-khe" secondAttribute="trailing" constant="28" id="chS-x7-F1k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N8P-vH-khe" secondAttribute="trailing" constant="40" id="KdT-7y-iBl"/>
+                <constraint firstItem="N8P-vH-khe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qnb-xD-DIS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YWL-fb-U1E" secondAttribute="trailing" id="tp5-aT-FGh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

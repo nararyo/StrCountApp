@@ -17,9 +17,11 @@
 		4B351BA5258A0010006FB383 /* StrokeLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */; };
 		4B351BA6258A0010006FB383 /* StrokeLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */; };
 		4B351BA8258A148E006FB383 /* AlphabetName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA7258A148E006FB383 /* AlphabetName.swift */; };
+		D01130D7FA0800673460F410 /* Pods_strokeCountApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56A47FCA033A1553982AB2 /* Pods_strokeCountApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		398A64175CA95F2C053408C1 /* Pods-strokeCountApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeCountApp.debug.xcconfig"; path = "Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4B351B862589FD81006FB383 /* strokeCountApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = strokeCountApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B351B892589FD81006FB383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B351B8B2589FD81006FB383 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeLogViewController.swift; sourceTree = "<group>"; };
 		4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeLogViewController.xib; sourceTree = "<group>"; };
 		4B351BA7258A148E006FB383 /* AlphabetName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetName.swift; sourceTree = "<group>"; };
+		7A56A47FCA033A1553982AB2 /* Pods_strokeCountApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_strokeCountApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		837B71D10404A02669B32004 /* Pods-strokeCountApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeCountApp.release.xcconfig"; path = "Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01130D7FA0800673460F410 /* Pods_strokeCountApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352C928F00EAF01F1CAB8835 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A56A47FCA033A1553982AB2 /* Pods_strokeCountApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47202448EE086E6FA659AED0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				398A64175CA95F2C053408C1 /* Pods-strokeCountApp.debug.xcconfig */,
+				837B71D10404A02669B32004 /* Pods-strokeCountApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4B351B7D2589FD81006FB383 = {
 			isa = PBXGroup;
 			children = (
 				4B351B882589FD81006FB383 /* strokeCountApp */,
 				4B351B872589FD81006FB383 /* Products */,
+				47202448EE086E6FA659AED0 /* Pods */,
+				352C928F00EAF01F1CAB8835 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B351B9A2589FD85006FB383 /* Build configuration list for PBXNativeTarget "strokeCountApp" */;
 			buildPhases = (
+				438E829D331D333EDF894923 /* [CP] Check Pods Manifest.lock */,
 				4B351B822589FD81006FB383 /* Sources */,
 				4B351B832589FD81006FB383 /* Frameworks */,
 				4B351B842589FD81006FB383 /* Resources */,
+				DB38A722BE6542C003EF38C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +189,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		438E829D331D333EDF894923 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-strokeCountApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB38A722BE6542C003EF38C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B351B822589FD81006FB383 /* Sources */ = {
@@ -314,6 +383,7 @@
 		};
 		4B351B9B2589FD85006FB383 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398A64175CA95F2C053408C1 /* Pods-strokeCountApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +402,7 @@
 		};
 		4B351B9C2589FD85006FB383 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 837B71D10404A02669B32004 /* Pods-strokeCountApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

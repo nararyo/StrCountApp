@@ -26,6 +26,14 @@
             </objects>
             <point key="canvasLocation" x="1582.608695652174" y="-507.58928571428567"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="feV-0B-44p">
+            <objects>
+                <viewController id="LEf-FA-AEo" customClass="ResultViewController" customModule="strokeCountApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPE-Vg-GgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="-508"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4m2-8m-wBR">
             <objects>

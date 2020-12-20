@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     func setLayout() {
+        print(self.view.snp.top)
         imageView.snp.makeConstraints{(make) -> Void in
             make.width.equalTo(self.view.frame.width)
             make.height.equalTo(232)

@@ -12,14 +12,13 @@ import SnapKit
 
 class ResultViewController: UIViewController {
     
-    var resultStrNumber: StrokeNumber?
+    var strokeFortuneResult: StrokeFortuneResult?
     var name: String?
     
     
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
@@ -32,8 +31,8 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewPosition()
-        cosmosView.rating = Double(resultStrNumber?.rate ?? 0)
-        describeLabel.text = resultStrNumber?.describe
+        cosmosView.rating = strokeFortuneResult?.rate ?? 0
+        describeLabel.text = strokeFortuneResult?.describe
         setAnimation()
     }
 

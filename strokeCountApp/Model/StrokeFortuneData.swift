@@ -8,21 +8,21 @@
 
 import Foundation
 
-class StrokeNumber {
+class StrokeFortuneData {
     
     var number: Int
-    var luckLebel: String
+    var luck: String
     var describe: String
     
     init(strokeNumberSourceArray: [String]){
         number = Int(strokeNumberSourceArray[0]) ?? 1
-        luckLebel = strokeNumberSourceArray[1]
+        luck = strokeNumberSourceArray[1]
         describe = strokeNumberSourceArray[2]
     }
     
-    var rate: Int {
+    var rate: Double {
         get {
-            switch luckLebel {
+            switch luck {
             case "際大吉":
                 return 7
             case "特大吉":

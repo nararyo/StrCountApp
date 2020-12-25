@@ -13,20 +13,21 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
-    
-    var strokeNumberArray = [StrokeNumber]()
+    var strokeFortuneDataArray = [StrokeFortuneData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "アカウントID画数占い"
         setLayout()
         loadFortune()
+        
     }
 
     
     @IBAction func ToResultButton(_ sender: Any) {
         let vc = ResultViewController()
-        vc.resultStrNumber = strokeNumberArray[3]
+        let stroke = Stroke(name: nameTextField.text ?? "a", lowerCaseHandle: .Recognize)
+        vc.strokeFortuneResult = StrokeFortuneResult(stroke: stroke, strokeFortuneData: strokeFortuneDataArray[stroke.count])
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -60,11 +61,12 @@ extension HomeViewController {
             let csvStringData =  try String(contentsOfFile:csvFilePath, encoding: String.Encoding.utf8)
             csvStringData.enumerateLines(invoking: {(line, stop) in
                 let strokeNumberSourceArray = line.components(separatedBy: ",")
-                let strokeNumber = StrokeNumber.init(strokeNumberSourceArray: strokeNumberSourceArray)
-                self.strokeNumberArray.append(strokeNumber)
+                let strokeFortuneData = StrokeFortuneData(strokeNumberSourceArray: strokeNumberSourceArray)
+                self.strokeFortuneDataArray.append(strokeFortuneData)
             })
         }catch {
             print("csvインポートエラー")
         }
     }
+    
 }

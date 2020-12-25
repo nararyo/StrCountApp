@@ -16,13 +16,14 @@
 		4B351BA02589FF5B006FB383 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351B9E2589FF5B006FB383 /* HomeViewController.xib */; };
 		4B351BA5258A0010006FB383 /* StrokeLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */; };
 		4B351BA6258A0010006FB383 /* StrokeLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */; };
-		4B351BA8258A148E006FB383 /* AlphabetName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA7258A148E006FB383 /* AlphabetName.swift */; };
+		4B351BA8258A148E006FB383 /* StrokeFotuneResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */; };
 		4B5C04B1258BB686008047EB /* fortune.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C04B0258BB686008047EB /* fortune.csv */; };
-		4B5C04B3258BB85C008047EB /* StrokeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C04B2258BB85C008047EB /* StrokeNumber.swift */; };
+		4B5C04B3258BB85C008047EB /* StrokeFortuneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */; };
 		4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE5DA258F3FC800F7B0A4 /* extension.swift */; };
 		4B64981E258C372800636B12 /* fortune2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B64981D258C372800636B12 /* fortune2.csv */; };
 		4B895E5E258D9EF8005D88D1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895E5C258D9EF8005D88D1 /* ResultViewController.swift */; };
 		4B895E5F258D9EF8005D88D1 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B895E5D258D9EF8005D88D1 /* ResultViewController.xib */; };
+		4BF225D52593936A00F2AD8F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF225D42593936A00F2AD8F /* Stroke.swift */; };
 		D01130D7FA0800673460F410 /* Pods_strokeCountApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56A47FCA033A1553982AB2 /* Pods_strokeCountApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,13 +40,14 @@
 		4B351B9E2589FF5B006FB383 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeLogViewController.swift; sourceTree = "<group>"; };
 		4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeLogViewController.xib; sourceTree = "<group>"; };
-		4B351BA7258A148E006FB383 /* AlphabetName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetName.swift; sourceTree = "<group>"; };
+		4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFotuneResult.swift; sourceTree = "<group>"; };
 		4B5C04B0258BB686008047EB /* fortune.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fortune.csv; path = ../../../fortune.csv; sourceTree = "<group>"; };
-		4B5C04B2258BB85C008047EB /* StrokeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeNumber.swift; sourceTree = "<group>"; };
+		4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFortuneData.swift; sourceTree = "<group>"; };
 		4B5DE5DA258F3FC800F7B0A4 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		4B64981D258C372800636B12 /* fortune2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fortune2.csv; path = ../../../fortune2.csv; sourceTree = "<group>"; };
 		4B895E5C258D9EF8005D88D1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4B895E5D258D9EF8005D88D1 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		4BF225D42593936A00F2AD8F /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		7A56A47FCA033A1553982AB2 /* Pods_strokeCountApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_strokeCountApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837B71D10404A02669B32004 /* Pods-strokeCountApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeCountApp.release.xcconfig"; path = "Target Support Files/Pods-strokeCountApp/Pods-strokeCountApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +108,7 @@
 				4B5C04B0258BB686008047EB /* fortune.csv */,
 				4B64981D258C372800636B12 /* fortune2.csv */,
 				4B5DE5DA258F3FC800F7B0A4 /* extension.swift */,
-				4B5C04B2258BB85C008047EB /* StrokeNumber.swift */,
-				4B351BA7258A148E006FB383 /* AlphabetName.swift */,
+				4BF225D32593923900F2AD8F /* Model */,
 				4B351BA12589FFCF006FB383 /* ViewController */,
 				4B351B922589FD85006FB383 /* Assets.xcassets */,
 				4B351B942589FD85006FB383 /* LaunchScreen.storyboard */,
@@ -151,6 +152,16 @@
 				4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */,
 			);
 			path = StrokeLog;
+			sourceTree = "<group>";
+		};
+		4BF225D32593923900F2AD8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */,
+				4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */,
+				4BF225D42593936A00F2AD8F /* Stroke.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B351B8A2589FD81006FB383 /* AppDelegate.swift in Sources */,
-				4B351BA8258A148E006FB383 /* AlphabetName.swift in Sources */,
+				4B351BA8258A148E006FB383 /* StrokeFotuneResult.swift in Sources */,
 				4B895E5E258D9EF8005D88D1 /* ResultViewController.swift in Sources */,
-				4B5C04B3258BB85C008047EB /* StrokeNumber.swift in Sources */,
+				4B5C04B3258BB85C008047EB /* StrokeFortuneData.swift in Sources */,
 				4B351B8C2589FD81006FB383 /* SceneDelegate.swift in Sources */,
+				4BF225D52593936A00F2AD8F /* Stroke.swift in Sources */,
 				4B351BA5258A0010006FB383 /* StrokeLogViewController.swift in Sources */,
 				4B351B9F2589FF5B006FB383 /* HomeViewController.swift in Sources */,
 				4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */,

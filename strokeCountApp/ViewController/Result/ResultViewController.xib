@@ -15,7 +15,6 @@
                 <outlet property="countLabel" destination="zXL-lT-D2B" id="rhj-VH-6kN"/>
                 <outlet property="describeLabel" destination="cfS-r5-1vn" id="Le1-QD-szq"/>
                 <outlet property="nameLabel" destination="Jbj-SW-ZVb" id="d8y-LG-dMn"/>
-                <outlet property="saveButton" destination="x2h-6D-lMA" id="ltN-HB-Dcg"/>
                 <outlet property="scrollView" destination="KjX-b7-HDZ" id="OVW-Zh-qWv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -116,6 +115,9 @@
                                             <integer key="value" value="30"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="JMz-TC-kss"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

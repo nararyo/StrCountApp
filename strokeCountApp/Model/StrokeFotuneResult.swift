@@ -7,15 +7,17 @@
 //
 
 import Foundation
+import RealmSwift
 
-class StrokeFortuneResult{
+class StrokeFortuneResult: Object{
     
-    var stroke: Stroke
-    var rate: Double
-    var describe: String
-    var userComment: String?
+    @objc dynamic var stroke: Stroke?
+    @objc dynamic var rate: Double = 0
+    @objc dynamic var describe: String = ""
+    @objc dynamic var userComment: String = ""
     
-    init(stroke: Stroke, strokeFortuneData: StrokeFortuneData) {
+    convenience init(stroke: Stroke, strokeFortuneData: StrokeFortuneData) {
+        self.init()
         self.stroke = stroke
         self.rate = strokeFortuneData.rate
         self.describe = strokeFortuneData.describe

@@ -9,20 +9,27 @@
 import UIKit
 import SnapKit
 import Cosmos
+import RealmSwift
 
 class StrokeListViewController: UIViewController {
     
-    var strokeResultList :[String] = [String]()
+    var strokeResultList: Results<StrokeFortuneResult>?
+    let realm = try! Realm()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "保存一覧"
+        loadData()
         setUpTableView()
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+        loadData()
+    }
 }
 
 extension StrokeListViewController {
@@ -31,7 +38,6 @@ extension StrokeListViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "StrokeListTableViewCell", bundle: nil), forCellReuseIdentifier: "StrokeListTableViewCell")
-        
     }
     
 }
@@ -39,15 +45,17 @@ extension StrokeListViewController {
 extension StrokeListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //strokeResultList.count
-        return 10
+        return strokeResultList?.count ?? 0
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StrokeListTableViewCell", for: indexPath) as? StrokeListTableViewCell else {
             return UITableViewCell()
         }
-        cell.cosmosView.rating = 3
-        cell.nameLabel.text = "test"
+        cell.cosmosView.rating = strokeResultList?[indexPath.row].rate ?? 0
+        cell.nameLabel.text = strokeResultList?[indexPath.row].stroke?.name
+        cell.strokeCountLabel.text = String(strokeResultList?[indexPath.row].stroke?.count ?? 0)
         return cell
     }
     
@@ -55,12 +63,30 @@ extension StrokeListViewController: UITableViewDataSource {
         return 60
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
 }
 
 extension StrokeListViewController: UITableViewDelegate {
     
+    func loadData() {
+        strokeResultList = realm.objects(StrokeFortuneResult.self)
+        tableView.reloadData()
+    }
+    
+    
+    func deleteRealmfile(){
+        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
+        let realmURLs = [
+            realmURL,
+            realmURL.appendingPathExtension("lock"),
+            realmURL.appendingPathExtension("note"),
+            realmURL.appendingPathExtension("management")
+        ]
+        for URL in realmURLs {
+            do {
+                try FileManager.default.removeItem(at: URL)
+            } catch {
+                // handle error
+            }
+        }
+    }
 }

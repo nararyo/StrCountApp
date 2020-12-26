@@ -9,38 +9,58 @@
 import UIKit
 import Cosmos
 import SnapKit
+import RealmSwift
 
 class ResultViewController: UIViewController {
     
     var strokeFortuneResult: StrokeFortuneResult?
     var name: String?
+    let realm = try! Realm()
     
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var describeLabel: UILabel!
-    
-    
     @IBOutlet weak var backButton: UIView!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewPosition()
+        nameLabel.text = strokeFortuneResult?.stroke?.name
+        countLabel.text = String(strokeFortuneResult?.stroke?.count ?? 0)
         cosmosView.rating = strokeFortuneResult?.rate ?? 0
         describeLabel.text = strokeFortuneResult?.describe
         setAnimation()
     }
 
 
+    @IBAction func saveButton(_ sender: Any) {
+        saveData()
+    }
    
 }
 
 extension ResultViewController {
+    
+    func saveData(){
+        do {
+            try realm.write{
+                guard let result = strokeFortuneResult else {
+                    return
+                }
+                realm.add(result)
+            }
+        }catch {
+            print("エラー")
+        }
+        
+    }
+    
+    
     
     func setViewPosition(){
         

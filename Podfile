@@ -8,4 +8,5 @@ target 'strokeCountApp' do
   # Pods for strokeCountApp
   pod 'SnapKit'
   pod 'Cosmos'
+  pod 'RealmSwift'
 end

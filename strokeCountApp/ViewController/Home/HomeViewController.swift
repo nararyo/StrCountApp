@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func ToResultButton(_ sender: Any) {
         let vc = ResultViewController()
-        let stroke = Stroke(name: nameTextField.text ?? "a", lowerCaseHandle: .Recognize)
-        vc.strokeFortuneResult = StrokeFortuneResult(stroke: stroke, strokeFortuneData: strokeFortuneDataArray[stroke.count])
+        let stroke = Stroke(name: nameTextField.text ?? "a", isLowerCaseRecognized: true)
+        vc.strokeFortuneResult = StrokeFortuneResult(stroke: stroke, strokeFortuneData: strokeFortuneDataArray[stroke.count ?? 0])
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -7,42 +7,40 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Stroke {
+class Stroke: Object {
     
-    enum LowerCaseHandleType{
-        case Dismiss
-        case Recognize
-    }
-    
-    var name: String
-    var lowerCaseHandle: LowerCaseHandleType
+    @objc dynamic var name: String = ""
+    @objc dynamic var isLowerCaseRecognized: Bool = true
     
     var aStroke = [String]()
     var twoStrokes = [String]()
     var threeStrokes = [String]()
     var fourStrokes = [String]()
     
-    init(name: String, lowerCaseHandle : LowerCaseHandleType){
-        self.name = name
-        self.lowerCaseHandle = lowerCaseHandle
+    convenience init(name: String, isLowerCaseRecognized: Bool){
         
-        switch lowerCaseHandle {
-            case .Dismiss:
-                self.aStroke = ["c", "C", "i", "I", "j", "J", "o", "O", "s", "S", "1", "0", "-", "_", "."]
-                self.twoStrokes = ["d", "D", "p", "P","g", "G", "l", "L", "q", "Q", "t", "T", "v", "V", "u", "U", "x", "X", "z", "Z", "2", "3", "4", "6", "7", "8", "9"]
-                self.threeStrokes = ["a", "A","b", "B", "f", "F", "h", "H", "k", "K", "n", "N", "r", "R", "y", "Y", "5"]
-                self.fourStrokes = ["e", "E", "m", "M", "w", "W"]
-
-            case .Recognize:
+        self.init()
+        self.name = name
+        self.isLowerCaseRecognized = isLowerCaseRecognized
+        
+        switch isLowerCaseRecognized {
+            case true:
                 self.aStroke = ["c", "l", "o", "s", "C", "I", "J", "O", "S", "U", "-", "_", "."]
                 self.twoStrokes = ["a","b", "d", "e", "f", "g", "h", "i", "j", "n", "p", "q", "r", "t", "u", "v", "x", "y", "D", "G", "L", "P", "Q", "V", "X", "2", "3", "4", "6", "7", "8", "9"]
                 self.threeStrokes = ["k", "m", "z", "A", "B", "F", "H", "K", "N", "R", "Y", "Z", "5"]
                 self.fourStrokes = ["w", "E",  "M", "W"]
+
+            case false:
+                self.aStroke = ["c", "C", "i", "I", "j", "J", "o", "O", "s", "S", "1", "0", "-", "_", "."]
+                self.twoStrokes = ["d", "D", "p", "P","g", "G", "l", "L", "q", "Q", "t", "T", "v", "V", "u", "U", "x", "X", "z", "Z", "2", "3", "4", "6", "7", "8", "9"]
+                self.threeStrokes = ["a", "A","b", "B", "f", "F", "h", "H", "k", "K", "n", "N", "r", "R", "y", "Y", "5"]
+                self.fourStrokes = ["e", "E", "m", "M", "w", "W"]
         }
     }
     
-    var count: Int {
+    public var count: Int? {
         get {
             var count = 0
             for i in name {

@@ -23,7 +23,7 @@ class StrokeFortuneData {
     var rate: Double {
         get {
             switch luck {
-            case "際大吉":
+            case "最大吉":
                 return 7
             case "特大吉":
                 return 6

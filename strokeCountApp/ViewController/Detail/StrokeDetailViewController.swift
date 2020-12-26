@@ -1,16 +1,14 @@
 //
-//  StrokeLogViewController.swift
+//  StrokeDetailViewController.swift
 //  strokeCountApp
 //
-//  Created by NR on 2020/12/16.
+//  Created by NR on 2020/12/26.
 //  Copyright © 2020 nararyo. All rights reserved.
 //
 
 import UIKit
-import SnapKit
-import Cosmos
 
-class StrokeLogViewController: UIViewController {
+class StrokeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,12 +14,16 @@
 		4B351B962589FD85006FB383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B351B942589FD85006FB383 /* LaunchScreen.storyboard */; };
 		4B351B9F2589FF5B006FB383 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351B9D2589FF5B006FB383 /* HomeViewController.swift */; };
 		4B351BA02589FF5B006FB383 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351B9E2589FF5B006FB383 /* HomeViewController.xib */; };
-		4B351BA5258A0010006FB383 /* StrokeLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */; };
-		4B351BA6258A0010006FB383 /* StrokeLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */; };
+		4B351BA5258A0010006FB383 /* StrokeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA3258A0010006FB383 /* StrokeListViewController.swift */; };
+		4B351BA6258A0010006FB383 /* StrokeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B351BA4258A0010006FB383 /* StrokeListViewController.xib */; };
 		4B351BA8258A148E006FB383 /* StrokeFotuneResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */; };
 		4B5C04B1258BB686008047EB /* fortune.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C04B0258BB686008047EB /* fortune.csv */; };
 		4B5C04B3258BB85C008047EB /* StrokeFortuneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */; };
 		4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE5DA258F3FC800F7B0A4 /* extension.swift */; };
+		4B5FB12E2596D09300B55574 /* StrokeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FB12C2596D09300B55574 /* StrokeListTableViewCell.swift */; };
+		4B5FB12F2596D09300B55574 /* StrokeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5FB12D2596D09300B55574 /* StrokeListTableViewCell.xib */; };
+		4B5FB1342596E6E600B55574 /* StrokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FB1322596E6E600B55574 /* StrokeDetailViewController.swift */; };
+		4B5FB1352596E6E600B55574 /* StrokeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5FB1332596E6E600B55574 /* StrokeDetailViewController.xib */; };
 		4B64981E258C372800636B12 /* fortune2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B64981D258C372800636B12 /* fortune2.csv */; };
 		4B895E5E258D9EF8005D88D1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895E5C258D9EF8005D88D1 /* ResultViewController.swift */; };
 		4B895E5F258D9EF8005D88D1 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B895E5D258D9EF8005D88D1 /* ResultViewController.xib */; };
@@ -38,12 +42,16 @@
 		4B351B972589FD85006FB383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B351B9D2589FF5B006FB383 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4B351B9E2589FF5B006FB383 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeLogViewController.swift; sourceTree = "<group>"; };
-		4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeLogViewController.xib; sourceTree = "<group>"; };
+		4B351BA3258A0010006FB383 /* StrokeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeListViewController.swift; sourceTree = "<group>"; };
+		4B351BA4258A0010006FB383 /* StrokeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeListViewController.xib; sourceTree = "<group>"; };
 		4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFotuneResult.swift; sourceTree = "<group>"; };
 		4B5C04B0258BB686008047EB /* fortune.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fortune.csv; path = ../../../fortune.csv; sourceTree = "<group>"; };
 		4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFortuneData.swift; sourceTree = "<group>"; };
 		4B5DE5DA258F3FC800F7B0A4 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		4B5FB12C2596D09300B55574 /* StrokeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeListTableViewCell.swift; sourceTree = "<group>"; };
+		4B5FB12D2596D09300B55574 /* StrokeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeListTableViewCell.xib; sourceTree = "<group>"; };
+		4B5FB1322596E6E600B55574 /* StrokeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeDetailViewController.swift; sourceTree = "<group>"; };
+		4B5FB1332596E6E600B55574 /* StrokeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeDetailViewController.xib; sourceTree = "<group>"; };
 		4B64981D258C372800636B12 /* fortune2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fortune2.csv; path = ../../../fortune2.csv; sourceTree = "<group>"; };
 		4B895E5C258D9EF8005D88D1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4B895E5D258D9EF8005D88D1 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 				4B5C04B0258BB686008047EB /* fortune.csv */,
 				4B64981D258C372800636B12 /* fortune2.csv */,
 				4B5DE5DA258F3FC800F7B0A4 /* extension.swift */,
+				4B5FB1302596D09D00B55574 /* View */,
 				4BF225D32593923900F2AD8F /* Model */,
 				4B351BA12589FFCF006FB383 /* ViewController */,
 				4B351B922589FD85006FB383 /* Assets.xcassets */,
@@ -121,8 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				4B351BA22589FFDB006FB383 /* Home */,
-				4B895E61258DA484005D88D1 /* StrokeLog */,
 				4B895E60258D9F00005D88D1 /* Result */,
+				4B895E61258DA484005D88D1 /* StrokeLog */,
+				4B5FB1362596E6F500B55574 /* Detail */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -134,6 +144,32 @@
 				4B351B9E2589FF5B006FB383 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		4B5FB1302596D09D00B55574 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B5FB1312596D0AD00B55574 /* StrokeList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B5FB1312596D0AD00B55574 /* StrokeList */ = {
+			isa = PBXGroup;
+			children = (
+				4B5FB12C2596D09300B55574 /* StrokeListTableViewCell.swift */,
+				4B5FB12D2596D09300B55574 /* StrokeListTableViewCell.xib */,
+			);
+			path = StrokeList;
+			sourceTree = "<group>";
+		};
+		4B5FB1362596E6F500B55574 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4B5FB1322596E6E600B55574 /* StrokeDetailViewController.swift */,
+				4B5FB1332596E6E600B55574 /* StrokeDetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		4B895E60258D9F00005D88D1 /* Result */ = {
@@ -148,8 +184,8 @@
 		4B895E61258DA484005D88D1 /* StrokeLog */ = {
 			isa = PBXGroup;
 			children = (
-				4B351BA3258A0010006FB383 /* StrokeLogViewController.swift */,
-				4B351BA4258A0010006FB383 /* StrokeLogViewController.xib */,
+				4B351BA3258A0010006FB383 /* StrokeListViewController.swift */,
+				4B351BA4258A0010006FB383 /* StrokeListViewController.xib */,
 			);
 			path = StrokeLog;
 			sourceTree = "<group>";
@@ -225,12 +261,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B351B962589FD85006FB383 /* LaunchScreen.storyboard in Resources */,
+				4B5FB1352596E6E600B55574 /* StrokeDetailViewController.xib in Resources */,
 				4B351B932589FD85006FB383 /* Assets.xcassets in Resources */,
+				4B5FB12F2596D09300B55574 /* StrokeListTableViewCell.xib in Resources */,
 				4B64981E258C372800636B12 /* fortune2.csv in Resources */,
 				4B351B912589FD81006FB383 /* Main.storyboard in Resources */,
 				4B351BA02589FF5B006FB383 /* HomeViewController.xib in Resources */,
 				4B5C04B1258BB686008047EB /* fortune.csv in Resources */,
-				4B351BA6258A0010006FB383 /* StrokeLogViewController.xib in Resources */,
+				4B351BA6258A0010006FB383 /* StrokeListViewController.xib in Resources */,
 				4B895E5F258D9EF8005D88D1 /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,10 +325,12 @@
 				4B351B8A2589FD81006FB383 /* AppDelegate.swift in Sources */,
 				4B351BA8258A148E006FB383 /* StrokeFotuneResult.swift in Sources */,
 				4B895E5E258D9EF8005D88D1 /* ResultViewController.swift in Sources */,
+				4B5FB12E2596D09300B55574 /* StrokeListTableViewCell.swift in Sources */,
 				4B5C04B3258BB85C008047EB /* StrokeFortuneData.swift in Sources */,
+				4B5FB1342596E6E600B55574 /* StrokeDetailViewController.swift in Sources */,
 				4B351B8C2589FD81006FB383 /* SceneDelegate.swift in Sources */,
 				4BF225D52593936A00F2AD8F /* Stroke.swift in Sources */,
-				4B351BA5258A0010006FB383 /* StrokeLogViewController.swift in Sources */,
+				4B351BA5258A0010006FB383 /* StrokeListViewController.swift in Sources */,
 				4B351B9F2589FF5B006FB383 /* HomeViewController.swift in Sources */,
 				4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */,
 			);

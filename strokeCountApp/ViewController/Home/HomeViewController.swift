@@ -13,13 +13,20 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var validateMessageLabel: UILabel!
+    
+    @IBOutlet weak var toResultButton: UIButton!
+    
     var strokeFortuneDataArray = [StrokeFortuneData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "アカウントID画数占い"
         setLayout()
+        setUpTextField()
+        buttonView()
         loadFortune()
+        
         
     }
 
@@ -35,6 +42,16 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController {
+    
+    func setUpTextField() {
+        nameTextField.delegate = self
+    }
+    
+    func buttonView(){
+        toResultButton.layer.shadowOffset = CGSize(width: 1, height: 1)
+        toResultButton.layer.shadowOpacity = 0.5
+        toResultButton.layer.shadowColor = UIColor.black.cgColor
+    }
     
     func setLayout() {
         print(self.view.snp.top)
@@ -69,4 +86,27 @@ extension HomeViewController {
         }
     }
     
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validateMessageLabel.textColor = .red
+        if nameTextField.text?.isValid(.alphanumeric) ?? false {
+            validateMessageLabel.text = "正しいです"
+            validateMessageLabel.textColor = .blue
+            //toResultButton.isHidden = false
+            toResultButton.isEnabled = true
+        }else {
+            validateMessageLabel.text = "スペース・全角文字は判定できません"
+            validateMessageLabel.textColor = .init(red: 255/255, green: 66/255, blue: 110/255, alpha: 1)
+            //toResultButton.isHidden = true
+            toResultButton.isEnabled = false
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
+    }
 }

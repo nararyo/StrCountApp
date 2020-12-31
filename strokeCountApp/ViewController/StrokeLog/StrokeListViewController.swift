@@ -21,6 +21,7 @@ class StrokeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "保存一覧"
+        print(#function)
         loadData()
         setUpTableView()
     }
@@ -38,6 +39,29 @@ extension StrokeListViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "StrokeListTableViewCell", bundle: nil), forCellReuseIdentifier: "StrokeListTableViewCell")
+    }
+    
+    func loadData() {
+        strokeResultList = realm.objects(StrokeFortuneResult.self)
+        tableView.reloadData()
+    }
+    
+    // RealmFile削除したい時
+    func deleteRealmfile(){
+        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
+        let realmURLs = [
+            realmURL,
+            realmURL.appendingPathExtension("lock"),
+            realmURL.appendingPathExtension("note"),
+            realmURL.appendingPathExtension("management")
+        ]
+        for URL in realmURLs {
+            do {
+                try FileManager.default.removeItem(at: URL)
+            } catch {
+                // handle error
+            }
+        }
     }
     
 }
@@ -63,30 +87,13 @@ extension StrokeListViewController: UITableViewDataSource {
         return 60
     }
     
+    
 }
 
 extension StrokeListViewController: UITableViewDelegate {
     
-    func loadData() {
-        strokeResultList = realm.objects(StrokeFortuneResult.self)
-        tableView.reloadData()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
     }
     
-    
-    func deleteRealmfile(){
-        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
-        let realmURLs = [
-            realmURL,
-            realmURL.appendingPathExtension("lock"),
-            realmURL.appendingPathExtension("note"),
-            realmURL.appendingPathExtension("management")
-        ]
-        for URL in realmURLs {
-            do {
-                try FileManager.default.removeItem(at: URL)
-            } catch {
-                // handle error
-            }
-        }
-    }
 }

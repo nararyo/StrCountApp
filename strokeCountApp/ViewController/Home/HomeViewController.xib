@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="imageView" destination="YWL-fb-U1E" id="vz7-NQ-yYf"/>
                 <outlet property="nameTextField" destination="N8P-vH-khe" id="58e-UU-1cC"/>
+                <outlet property="toResultButton" destination="hEh-QG-2io" id="ccR-QX-Cjz"/>
+                <outlet property="validateMessageLabel" destination="Fsw-LJ-o60" id="S3P-0y-CDs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +24,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="nameCard" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-fb-U1E">
                     <rect key="frame" x="0.0" y="99" width="375" height="232"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-vH-khe">
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-vH-khe">
                     <rect key="frame" x="42.5" y="185" width="290" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="290" id="1sV-gX-Jov"/>
@@ -39,7 +41,7 @@
                         <constraint firstAttribute="width" constant="180" id="gCp-EF-fwh"/>
                     </constraints>
                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="結果を見る">
                         <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -51,13 +53,21 @@
                         <action selector="ToResultButton:" destination="-1" eventType="touchUpInside" id="O5L-xt-ujO"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="テスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsw-LJ-o60">
+                    <rect key="frame" x="42.5" y="333" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.98019617800000003" green="0.98088949920000001" blue="0.94509381059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="hEh-QG-2io" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BoL-Lg-A3A"/>
                 <constraint firstItem="YWL-fb-U1E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FN5-vs-z5D"/>
                 <constraint firstItem="hEh-QG-2io" firstAttribute="top" secondItem="YWL-fb-U1E" secondAttribute="bottom" constant="120" id="hiv-JU-qg1"/>
+                <constraint firstItem="N8P-vH-khe" firstAttribute="leading" secondItem="Fsw-LJ-o60" secondAttribute="leading" id="l0l-Y3-zxN"/>
                 <constraint firstItem="N8P-vH-khe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qnb-xD-DIS"/>
+                <constraint firstItem="Fsw-LJ-o60" firstAttribute="top" secondItem="N8P-vH-khe" secondAttribute="bottom" constant="86" id="sPc-jz-dPd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YWL-fb-U1E" secondAttribute="trailing" id="tp5-aT-FGh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

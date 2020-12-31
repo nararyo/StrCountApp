@@ -32,3 +32,32 @@ extension UIView {
         }
     }
 }
+
+extension String {
+    
+    enum ValidityType {
+        case alphanumeric
+    }
+    
+    enum invalidMessage: String {
+        case fullWidthCharacter = "スペース・全角文字が含まれています"
+        case overStringCount = "最大文字数を超えています"
+        case none = ""
+    }
+    
+    enum Regex: String {
+        case alphanumeric = "[!-~]{1,99}"
+    }
+    
+    func isValid(_ validityType: ValidityType) -> Bool {
+        let format = "SELF MATCHES %@"
+        var regex = ""
+        
+        switch validityType {
+        case .alphanumeric:
+            regex = Regex.alphanumeric.rawValue
+        }
+        
+        return NSPredicate(format: format, regex).evaluate(with: self)
+    }
+}

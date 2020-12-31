@@ -24,24 +24,31 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var describeLabel: UILabel!
-    @IBOutlet weak var backButton: UIView!
+    
     @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewPosition()
-        nameLabel.text = strokeFortuneResult?.stroke?.name
-        countLabel.text = String(strokeFortuneResult?.stroke?.count ?? 0)
-        cosmosView.rating = strokeFortuneResult?.rate ?? 0
-        describeLabel.text = strokeFortuneResult?.describe
+        setButton()
+        setLabelContents()
         setAnimation()
     }
 
 
     @IBAction func saveButton(_ sender: Any) {
         saveData()
+        doneAlert()
     }
-   
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension ResultViewController {
@@ -60,13 +67,7 @@ extension ResultViewController {
         
     }
     
-    
-    
     func setViewPosition(){
-        
-        print(self.view.bounds.height)
-        print(UIScreen.main.bounds.height)
-        
         
         scrollView.snp.makeConstraints{(make) -> Void in
             make.edges.equalToSuperview()
@@ -106,6 +107,27 @@ extension ResultViewController {
         print(contentView.bounds.height)
     }
     
+    func setButton(){
+        saveButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        saveButton.layer.shadowOpacity = 0.3
+        saveButton.layer.shadowColor = UIColor.black.cgColor
+        saveButton.layer.cornerRadius = 30
+        
+        backButton.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        backButton.layer.shadowOpacity = 0.3
+        backButton.layer.shadowColor = UIColor.black.cgColor
+        backButton.layer.cornerRadius = 30
+        
+        
+    }
+    
+    func setLabelContents(){
+        nameLabel.text = strokeFortuneResult?.stroke?.name
+        countLabel.text = String(strokeFortuneResult?.stroke?.count ?? 0)
+        cosmosView.rating = strokeFortuneResult?.rate ?? 0
+        describeLabel.text = strokeFortuneResult?.describe
+    }
+    
     func setAnimation(){
         cosmosView.alpha = 0.0
         countLabel.alpha = 0.0
@@ -121,5 +143,14 @@ extension ResultViewController {
             //self.saveButton.alpha = 1.0
             
         }, completion: nil)
+    }
+    
+    func doneAlert(){
+        let alertController = UIAlertController.init(title: "登録完了", message: "保存しました", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: {(UIAlertAction) -> Void in
+            alertController.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(okButton)
+        present(alertController, animated: true, completion: nil)
     }
 }

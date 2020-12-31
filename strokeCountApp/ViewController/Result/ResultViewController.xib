@@ -9,12 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="strokeCountApp" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="Aga-Ue-4Ve" id="R4U-vw-vF4"/>
+                <outlet property="backButton" destination="oWb-MP-oxo" id="B5W-LA-lXe"/>
                 <outlet property="contentView" destination="Aga-Ue-4Ve" id="pMm-uF-9Yn"/>
                 <outlet property="cosmosView" destination="ceo-Ic-M0x" id="PGu-h2-e87"/>
                 <outlet property="countLabel" destination="zXL-lT-D2B" id="rhj-VH-6kN"/>
                 <outlet property="describeLabel" destination="cfS-r5-1vn" id="Le1-QD-szq"/>
                 <outlet property="nameLabel" destination="Jbj-SW-ZVb" id="d8y-LG-dMn"/>
+                <outlet property="saveButton" destination="x2h-6D-lMA" id="1ab-1g-CM0"/>
                 <outlet property="scrollView" destination="KjX-b7-HDZ" id="OVW-Zh-qWv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -91,13 +92,16 @@
                                         <constraint firstAttribute="width" constant="125" id="EZX-3s-quB"/>
                                         <constraint firstAttribute="height" constant="62" id="JC7-Uj-Ptf"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
-                                    <state key="normal" title="Back"/>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                    <state key="normal" title="やり直す"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="30"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="CI8-Oh-6Sh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-6D-lMA">
                                     <rect key="frame" x="221" y="523" width="116" height="62"/>
@@ -106,15 +110,10 @@
                                         <constraint firstAttribute="width" constant="125" id="NWD-YG-tKc"/>
                                         <constraint firstAttribute="height" constant="62" id="uMA-2z-vrS"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <state key="normal" title="Keep">
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                    <state key="normal" title="保存">
                                         <color key="titleColor" red="0.25331881639999998" green="0.37007770143972601" blue="0.49806612729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="30"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="JMz-TC-kss"/>
                                     </connections>

@@ -42,6 +42,14 @@
             </objects>
             <point key="canvasLocation" x="2599" y="-508"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="Z8F-lf-Z2I">
+            <objects>
+                <viewController id="eka-zX-0X2" customClass="SettingViewController" customModule="strokeCountApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66e-5J-e0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="-1098"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4m2-8m-wBR">
             <objects>

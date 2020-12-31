@@ -19,6 +19,8 @@
 		4B351BA8258A148E006FB383 /* StrokeFotuneResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */; };
 		4B5C04B1258BB686008047EB /* fortune.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C04B0258BB686008047EB /* fortune.csv */; };
 		4B5C04B3258BB85C008047EB /* StrokeFortuneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */; };
+		4B5C7A33259DB89800578208 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C7A31259DB89800578208 /* SettingViewController.swift */; };
+		4B5C7A34259DB89800578208 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C7A32259DB89800578208 /* SettingViewController.xib */; };
 		4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE5DA258F3FC800F7B0A4 /* extension.swift */; };
 		4B5FB12E2596D09300B55574 /* StrokeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FB12C2596D09300B55574 /* StrokeListTableViewCell.swift */; };
 		4B5FB12F2596D09300B55574 /* StrokeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5FB12D2596D09300B55574 /* StrokeListTableViewCell.xib */; };
@@ -47,6 +49,8 @@
 		4B351BA7258A148E006FB383 /* StrokeFotuneResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFotuneResult.swift; sourceTree = "<group>"; };
 		4B5C04B0258BB686008047EB /* fortune.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fortune.csv; path = ../../../fortune.csv; sourceTree = "<group>"; };
 		4B5C04B2258BB85C008047EB /* StrokeFortuneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFortuneData.swift; sourceTree = "<group>"; };
+		4B5C7A31259DB89800578208 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4B5C7A32259DB89800578208 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		4B5DE5DA258F3FC800F7B0A4 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		4B5FB12C2596D09300B55574 /* StrokeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeListTableViewCell.swift; sourceTree = "<group>"; };
 		4B5FB12D2596D09300B55574 /* StrokeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeListTableViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				4B895E60258D9F00005D88D1 /* Result */,
 				4B895E61258DA484005D88D1 /* StrokeLog */,
 				4B5FB1362596E6F500B55574 /* Detail */,
+				4B5C7A35259DB8A000578208 /* Setting */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -144,6 +149,15 @@
 				4B351B9E2589FF5B006FB383 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		4B5C7A35259DB8A000578208 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				4B5C7A31259DB89800578208 /* SettingViewController.swift */,
+				4B5C7A32259DB89800578208 /* SettingViewController.xib */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		4B5FB1302596D09D00B55574 /* View */ = {
@@ -267,6 +281,7 @@
 				4B64981E258C372800636B12 /* fortune2.csv in Resources */,
 				4B351B912589FD81006FB383 /* Main.storyboard in Resources */,
 				4B351BA02589FF5B006FB383 /* HomeViewController.xib in Resources */,
+				4B5C7A34259DB89800578208 /* SettingViewController.xib in Resources */,
 				4B5C04B1258BB686008047EB /* fortune.csv in Resources */,
 				4B351BA6258A0010006FB383 /* StrokeListViewController.xib in Resources */,
 				4B895E5F258D9EF8005D88D1 /* ResultViewController.xib in Resources */,
@@ -333,6 +348,7 @@
 				4B351BA5258A0010006FB383 /* StrokeListViewController.swift in Sources */,
 				4B351B9F2589FF5B006FB383 /* HomeViewController.swift in Sources */,
 				4B5DE5DB258F3FC800F7B0A4 /* extension.swift in Sources */,
+				4B5C7A33259DB89800578208 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

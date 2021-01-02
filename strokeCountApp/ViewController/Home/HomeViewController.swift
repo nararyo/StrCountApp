@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         title = "アカウントID画数占い"
         setLayout()
         setUpTextField()
+        setNavigationItem()
         buttonView()
         loadFortune()
         
@@ -32,8 +33,11 @@ class HomeViewController: UIViewController {
 
     
     @IBAction func ToResultButton(_ sender: Any) {
+        
+        let alphabetStandard = UserDefaults.standard.value(forKey: "isLowerCaseRecognized") as? Bool ?? true
+            
         let vc = ResultViewController()
-        let stroke = Stroke(name: nameTextField.text ?? "a", isLowerCaseRecognized: true)
+        let stroke = Stroke(name: nameTextField.text ?? "", isLowerCaseRecognized: alphabetStandard )
         vc.strokeFortuneResult = StrokeFortuneResult(stroke: stroke, strokeFortuneData: strokeFortuneDataArray[stroke.count ?? 0])
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -45,6 +49,21 @@ extension HomeViewController {
     
     func setUpTextField() {
         nameTextField.delegate = self
+    }
+    
+    @objc func moveSettingVC(){
+        print(#function)
+        let vc = SettingTableViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setNavigationItem() {
+        let button = UIButton(type: .system)
+        button.addTarget(self, action: #selector(moveSettingVC), for: .touchUpInside)
+        button.setTitle("設定", for: .normal)
+        let item = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = item
+        
     }
     
     func buttonView(){

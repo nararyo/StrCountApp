@@ -61,3 +61,19 @@ extension String {
         return NSPredicate(format: format, regex).evaluate(with: self)
     }
 }
+
+extension UIImage {
+    func resize(size _size: CGSize) -> UIImage? {
+        
+        let resizedSize = CGSize(width: size.width, height: size.height)
+
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0) // 変更
+        draw(in: CGRect(origin: .zero, size: resizedSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return resizedImage
+    }
+}
+
+

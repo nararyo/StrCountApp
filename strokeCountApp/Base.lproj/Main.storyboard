@@ -24,11 +24,20 @@
             </objects>
             <point key="canvasLocation" x="2599" y="265"/>
         </scene>
+        <!--Setting Table View Controller-->
+        <scene sceneID="6UL-6u-DpM">
+            <objects>
+                <viewController id="CXu-Ot-5i6" customClass="SettingTableViewController" customModule="strokeCountApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ce1-gp-IaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="-1183"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="RBh-bF-YPd">
             <objects>
                 <viewController id="edA-CO-CtP" customClass="HomeViewController" customModule="strokeCountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sH2-sb-uxs"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jc-hm-bVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,14 +50,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPE-Vg-GgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2599" y="-508"/>
-        </scene>
-        <!--Setting View Controller-->
-        <scene sceneID="Z8F-lf-Z2I">
-            <objects>
-                <viewController id="eka-zX-0X2" customClass="SettingViewController" customModule="strokeCountApp" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="66e-5J-e0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-478" y="-1098"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4m2-8m-wBR">

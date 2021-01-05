@@ -24,9 +24,9 @@ class Stroke: Object {
         get {
             switch isLowerCaseRecognized {
             case true:
-                return ["c", "l", "o", "s", "C", "I", "J", "O", "S", "U", "-", "_", ".", "/"]
+                return ["c", "l", "o", "s", "C", "I", "J", "O", "S", "U", "0", "1", "-", "_", ".", "/", ",", "(", ")", "~", "|", "`", "'", "\\"]
             default:
-                return ["c", "C", "i", "I", "j", "J", "o", "O", "s", "S", "1", "0", "-", "_", ".", "/"]
+                return ["c", "C", "i", "I", "j", "J", "o", "O", "s", "S", "1", "0", "-", "_", ".", "/", ",", "(", ")", "~", "|", "`", "'", "\\"]
             }
         }
     }
@@ -35,9 +35,9 @@ class Stroke: Object {
         get {
             switch isLowerCaseRecognized {
             case true:
-                return ["a","b", "d", "e", "f", "g", "h", "i", "j", "n", "p", "q", "r", "t", "u", "v", "x", "y", "D", "G", "L", "P", "Q", "V", "X", "2", "3", "4", "6", "7", "8", "9"]
+                return ["a","b", "d", "e", "f", "g", "h", "i", "j", "n", "p", "q", "r", "t", "u", "v", "x", "y", "D", "G", "L", "P", "Q", "V", "X", "2", "3", "4", "6", "7", "8", "9", "@", "!", "$", "&", "+", ":", ";", "<", ">", "{", "}","\""]
             default:
-                return ["d", "D", "p", "P","g", "G", "l", "L", "q", "Q", "t", "T", "v", "V", "u", "U", "x", "X", "z", "Z", "2", "3", "4", "6", "7", "8", "9"]
+                return ["d", "D", "p", "P","g", "G", "l", "L", "q", "Q", "t", "T", "v", "V", "u", "U", "x", "X", "z", "Z", "2", "3", "4", "6", "7", "8", "9", "?", "=", "@", "!", "$", "&", "+", ":", ";", "<", ">", "{", "}", "\""]
             }
         }
     }
@@ -45,9 +45,9 @@ class Stroke: Object {
         get {
             switch isLowerCaseRecognized {
             case true:
-                return ["k", "m", "z", "A", "B", "F", "H", "K", "N", "R", "Y", "Z", "5"]
+                return ["k", "m", "z", "A", "B", "F", "H", "K", "N", "R", "Y", "Z", "5", "%", "[", "]", "*"]
             default:
-                return ["a", "A","b", "B", "f", "F", "h", "H", "k", "K", "n", "N", "r", "R", "y", "Y", "5"]
+                return ["a", "A","b", "B", "f", "F", "h", "H", "k", "K", "n", "N", "r", "R", "y", "Y", "5", "%", "[", "]", "*"]
             }
         }
     }
@@ -55,9 +55,9 @@ class Stroke: Object {
         get {
             switch isLowerCaseRecognized {
             case true:
-                return ["w", "E",  "M", "W"]
+                return ["w", "E",  "M", "W", "#"]
             default:
-                return ["e", "E", "m", "M", "w", "W"]
+                return ["e", "E", "m", "M", "w", "W", "#"]
             }
         }
     }
@@ -75,8 +75,11 @@ class Stroke: Object {
                 }else if fourStrokes.contains(String(i)){
                     count += 4
                 }else {
-                    print("該当しません")
+                    print("exeption literal")
                 }
+            }
+            if count > 81 {
+                count = count - 81
             }
             return count
         }

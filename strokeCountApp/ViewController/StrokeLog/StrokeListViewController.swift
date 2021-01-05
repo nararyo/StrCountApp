@@ -79,7 +79,7 @@ extension StrokeListViewController: UITableViewDataSource {
         }
         cell.cosmosView.rating = strokeResultList?[indexPath.row].rate ?? 0
         cell.nameLabel.text = strokeResultList?[indexPath.row].stroke?.name
-        cell.strokeCountLabel.text = String(strokeResultList?[indexPath.row].stroke?.count ?? 0)
+        cell.strokeCountLabel.text = "\(String(strokeResultList?[indexPath.row].stroke?.count ?? 0))画"
         return cell
     }
     
@@ -94,7 +94,9 @@ extension StrokeListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected")
-        
+        let vc = StrokeDetailViewController()
+        vc.result = strokeResultList?[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

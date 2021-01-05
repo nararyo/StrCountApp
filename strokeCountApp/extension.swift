@@ -42,7 +42,7 @@ extension String {
     enum invalidMessage: String {
         case fullWidthCharacter = "スペース・全角文字が含まれています"
         case overStringCount = "最大文字数を超えています"
-        case none = ""
+        case none = "文字を入力してください"
     }
     
     enum Regex: String {

@@ -22,6 +22,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var noKaKuSuHaLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var describeLabel: UILabel!
     
@@ -32,12 +33,15 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewPosition()
-        setButton()
-        setLabelContents()
+        setContentsPosition()
+        setContentsProperty()
+        setValueToContents()
         setAnimation()
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.popViewController(animated: false)
+    }
 
     @IBAction func saveButton(_ sender: Any) {
         saveData()
@@ -64,19 +68,20 @@ extension ResultViewController {
         }catch {
             print("エラー")
         }
-        
     }
     
-    func setViewPosition(){
+    func setContentsPosition(){
         
         scrollView.snp.makeConstraints{(make) -> Void in
             make.edges.equalToSuperview()
         }
         
         contentView.snp.makeConstraints{(make) -> Void in
-            make.width.equalTo(scrollView.frameLayoutGuide)
-            make.edges.equalTo(scrollView.contentLayoutGuide)
+            make.edges.equalTo(scrollView.contentLayoutGuide).inset(12)
+            make.width.equalTo(self.view.frame.width - 24)
+            make.centerX.equalToSuperview()
             make.height.equalTo(self.view.bounds.height * 1.3)
+            //make.height.equalTo(scrollView.contentLayoutGuide)
         }
         
         nameLabel.snp.makeConstraints{(make)-> Void in
@@ -98,16 +103,11 @@ extension ResultViewController {
             make.right.left.equalToSuperview().inset(16)
             make.centerX.equalToSuperview()
         }
-        
-//        backButton.snp.makeConstraints{(make) -> Void in
-//            make.bottom.equalTo(countLabel.snp.bottom).offset(208)
-//
-//        }
-        
-        print(contentView.bounds.height)
     }
     
-    func setButton(){
+    func setContentsProperty(){
+        contentView.layer.cornerRadius = 5
+        
         saveButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         saveButton.layer.shadowOpacity = 0.3
         saveButton.layer.shadowColor = UIColor.black.cgColor
@@ -121,7 +121,7 @@ extension ResultViewController {
         
     }
     
-    func setLabelContents(){
+    func setValueToContents(){
         nameLabel.text = strokeFortuneResult?.stroke?.name
         countLabel.text = String(strokeFortuneResult?.stroke?.count ?? 0)
         cosmosView.rating = strokeFortuneResult?.rate ?? 0
@@ -135,7 +135,7 @@ extension ResultViewController {
         //backButton.alpha = 0.0
         //saveButton.alpha = 0.0
         
-        UIView.animate(withDuration: 2.0, delay: 0.6, options: [.curveEaseIn], animations: {
+        UIView.animate(withDuration: 2.0, delay: 0.8, options: [.curveEaseIn], animations: {
             self.cosmosView.alpha = 1.0
             self.countLabel.alpha = 1.0
             self.describeLabel.alpha = 1.0

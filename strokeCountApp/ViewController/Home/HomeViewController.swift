@@ -75,10 +75,10 @@ extension HomeViewController {
     func setLayout() {
         print(self.view.snp.top)
         imageView.snp.makeConstraints{(make) -> Void in
-            make.width.equalTo(self.view.frame.width)
+            make.width.equalTo(self.view.frame.width - 12)
             make.height.equalTo(232)
             make.top.equalTo(self.view.snp.top).offset(self.view.frame.height / 5)
-            make.right.left.equalTo(self.view)
+            make.right.left.equalTo(self.view).inset(6)
         }
         
         nameTextField.snp.makeConstraints{(make) -> Void in
@@ -114,12 +114,10 @@ extension HomeViewController: UITextFieldDelegate {
         if nameTextField.text?.isValid(.alphanumeric) ?? false {
             validateMessageLabel.text = "正しいです"
             validateMessageLabel.textColor = .blue
-            //toResultButton.isHidden = false
             toResultButton.isEnabled = true
         }else {
-            validateMessageLabel.text = "スペース・全角文字は判定できません"
+            validateMessageLabel.text = "判定できない文字が含まれています"
             validateMessageLabel.textColor = .init(red: 255/255, green: 66/255, blue: 110/255, alpha: 1)
-            //toResultButton.isHidden = true
             toResultButton.isEnabled = false
         }
     }

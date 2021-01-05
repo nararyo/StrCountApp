@@ -57,13 +57,13 @@ class SettingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "カウント設定"
+        return "アルファベットのカウント設定"
     }
 }
 
 extension SettingTableViewController: SettingTableViewCellDelegate {
     
-    func switchChanged(_ isLowerCaseRecognaized: Bool) {
+    func sendSwitchValue(_ isLowerCaseRecognaized: Bool) {
         print(isLowerCaseRecognaized)
         self.isLowerCaseRecognaized = isLowerCaseRecognaized
     }

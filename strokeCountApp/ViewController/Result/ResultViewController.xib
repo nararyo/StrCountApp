@@ -15,6 +15,7 @@
                 <outlet property="countLabel" destination="zXL-lT-D2B" id="rhj-VH-6kN"/>
                 <outlet property="describeLabel" destination="cfS-r5-1vn" id="Le1-QD-szq"/>
                 <outlet property="nameLabel" destination="Jbj-SW-ZVb" id="d8y-LG-dMn"/>
+                <outlet property="noKaKuSuHaLabel" destination="x2c-43-rc0" id="OpB-TP-70l"/>
                 <outlet property="saveButton" destination="x2h-6D-lMA" id="1ab-1g-CM0"/>
                 <outlet property="scrollView" destination="KjX-b7-HDZ" id="OVW-Zh-qWv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,7 +31,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Ue-4Ve">
-                            <rect key="frame" x="0.0" y="0.0" width="383" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
                                     <rect key="frame" x="142" y="63" width="82" height="38.5"/>
@@ -45,14 +46,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-lT-D2B">
-                                    <rect key="frame" x="169" y="235" width="45" height="54"/>
+                                    <rect key="frame" x="156" y="234" width="45" height="54"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                     <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-Ic-M0x" customClass="CosmosView" customModule="Cosmos">
-                                    <rect key="frame" x="92" y="321" width="199" height="24"/>
+                                    <rect key="frame" x="79" y="313" width="199" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <userDefinedRuntimeAttributes>
@@ -79,21 +80,39 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="desctibe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="desctibe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
                                     <rect key="frame" x="32" y="387" width="305" height="55"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-6D-lMA">
+                                    <rect key="frame" x="221" y="585" width="116" height="62"/>
+                                    <color key="backgroundColor" red="0.8824839323" green="0.84985096179999997" blue="0.5647221898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="125" id="NWD-YG-tKc"/>
+                                        <constraint firstAttribute="height" constant="58" id="uMA-2z-vrS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                    <state key="normal" title="保存">
+                                        <color key="titleColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="JMz-TC-kss"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWb-MP-oxo">
-                                    <rect key="frame" x="32" y="523" width="125" height="62"/>
+                                    <rect key="frame" x="32" y="585" width="125" height="62"/>
                                     <color key="backgroundColor" red="0.91085188360410951" green="0.926972822489041" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="125" id="EZX-3s-quB"/>
-                                        <constraint firstAttribute="height" constant="62" id="JC7-Uj-Ptf"/>
+                                        <constraint firstAttribute="height" constant="58" id="JC7-Uj-Ptf"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                    <state key="normal" title="やり直す"/>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                    <state key="normal" title="やり直す">
+                                        <color key="titleColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="30"/>
@@ -103,33 +122,19 @@
                                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="CI8-Oh-6Sh"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-6D-lMA">
-                                    <rect key="frame" x="221" y="523" width="116" height="62"/>
-                                    <color key="backgroundColor" red="1" green="0.71026197443150685" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="125" id="NWD-YG-tKc"/>
-                                        <constraint firstAttribute="height" constant="62" id="uMA-2z-vrS"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                    <state key="normal" title="保存">
-                                        <color key="titleColor" red="0.25331881639999998" green="0.37007770143972601" blue="0.49806612729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="JMz-TC-kss"/>
-                                    </connections>
-                                </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.98019617800000003" green="0.98088949920000001" blue="0.94509381059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstItem="x2c-43-rc0" firstAttribute="centerX" secondItem="Aga-Ue-4Ve" secondAttribute="centerX" id="1ID-D1-snI"/>
                                 <constraint firstItem="oWb-MP-oxo" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="32" id="6g8-aA-dQ2"/>
-                                <constraint firstItem="x2h-6D-lMA" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="ENg-8V-G5R"/>
                                 <constraint firstItem="x2c-43-rc0" firstAttribute="top" secondItem="Jbj-SW-ZVb" secondAttribute="bottom" constant="28" id="NBE-FH-4F3"/>
                                 <constraint firstAttribute="trailing" secondItem="x2h-6D-lMA" secondAttribute="trailing" constant="32" id="NDv-T0-Zx5"/>
-                                <constraint firstItem="oWb-MP-oxo" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="Wlw-nU-UGh"/>
+                                <constraint firstAttribute="bottom" secondItem="x2h-6D-lMA" secondAttribute="bottom" constant="12" id="ULu-sl-7dR"/>
+                                <constraint firstAttribute="bottom" secondItem="oWb-MP-oxo" secondAttribute="bottom" constant="12" id="xZo-zq-oFh"/>
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.8824839323" green="0.84985096179999997" blue="0.5647221898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <viewLayoutGuide key="contentLayoutGuide" id="5gc-6r-dwk"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="NsT-hb-0RY"/>
                 </scrollView>

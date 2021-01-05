@@ -10,7 +10,7 @@ import UIKit
 
 protocol SettingTableViewCellDelegate {
     
-    func switchChanged(_ isLowerCaseRecognaized: Bool)
+    func sendSwitchValue(_ isLowerCaseRecognaized: Bool)
 }
 
 class SettingTableViewCell: UITableViewCell {
@@ -18,6 +18,7 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var alphabetSwitch: UISwitch!
     //var isRecognizedLowerCase: Bool?
     var delegate: SettingTableViewCellDelegate?
+    @IBOutlet weak var alphabetSwitchLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,11 +26,13 @@ class SettingTableViewCell: UITableViewCell {
         if let switchValue = UserDefaults.standard.value(forKey: "isLowerCaseRecognized") as? Bool{
             alphabetSwitch.isOn = switchValue
         }
+        setSwitchLabel(alphabetSwitch.isOn)
     }
     
     
     @IBAction func valueChanged(_ sender: Any) {
-        self.delegate?.switchChanged(alphabetSwitch.isOn)
+        self.delegate?.sendSwitchValue(alphabetSwitch.isOn)
+        setSwitchLabel(alphabetSwitch.isOn)
     }
     
 
@@ -39,4 +42,15 @@ class SettingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension SettingTableViewCell {
+    
+    func setSwitchLabel(_ isRowerCaseRecognized: Bool) {
+        if isRowerCaseRecognized == true {
+            alphabetSwitchLabel.text = "大文字・小文字を区別する"
+        }else {
+            alphabetSwitchLabel.text = "大文字・小文字を区別しない"
+        }
+    }
 }

@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="contentView" destination="1vB-ga-SM3" id="Ud7-4j-NuL"/>
                 <outlet property="cosmosView" destination="wC4-uq-P4c" id="qgp-Wp-aKb"/>
+                <outlet property="countTypeLabel" destination="uag-HF-f7E" id="Df3-gt-JBs"/>
                 <outlet property="descriptionLabel" destination="eOp-ha-2tA" id="nsj-fv-1Ol"/>
                 <outlet property="nameLabel" destination="Wzz-Hr-2de" id="0Z6-og-eHw"/>
                 <outlet property="scrollView" destination="dst-qt-Ltv" id="39p-Yk-CFd"/>
@@ -28,7 +29,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vB-ga-SM3">
-                            <rect key="frame" x="35" y="12" width="309" height="735"/>
+                            <rect key="frame" x="19" y="12" width="342" height="735"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZr-BY-B2A">
                                     <rect key="frame" x="8" y="52" width="33" height="19.5"/>
@@ -42,20 +43,14 @@
                                     <color key="textColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzz-Hr-2de">
-                                    <rect key="frame" x="25" y="46" width="62" height="31.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzz-Hr-2de">
+                                    <rect key="frame" x="115" y="46" width="62" height="31.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                     <color key="textColor" red="0.15161044806161758" green="0.11533162601413684" blue="0.30354776872893385" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weg-90-gbS">
-                                    <rect key="frame" x="27.5" y="125.5" width="57" height="31.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                    <color key="textColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(英小文字識別する)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-HF-f7E">
-                                    <rect key="frame" x="2" y="165" width="108" height="15"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(英小文字識別する)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-HF-f7E">
+                                    <rect key="frame" x="100" y="162" width="108" height="15"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
@@ -78,8 +73,8 @@
                                     <color key="textColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-uq-P4c" customClass="CosmosView" customModule="Cosmos">
-                                    <rect key="frame" x="-29" y="215" width="170" height="20"/>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-uq-P4c" customClass="CosmosView" customModule="Cosmos">
+                                    <rect key="frame" x="100" y="198" width="170" height="20"/>
                                     <color key="backgroundColor" red="0.98019617800000003" green="0.98088949920000001" blue="0.94509381059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
@@ -93,6 +88,12 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="24画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weg-90-gbS">
+                                    <rect key="frame" x="126" y="113" width="57" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <color key="textColor" red="0.15161044809999999" green="0.11533162600000001" blue="0.3035477687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.98019617800000003" green="0.98088949920000001" blue="0.94509381059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
@@ -124,7 +125,7 @@
             </subviews>
             <color key="backgroundColor" red="0.88248393229289335" green="0.84985096181570874" blue="0.56472218984174472" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="134.78260869565219" y="96.428571428571431"/>
+            <point key="canvasLocation" x="133.59999999999999" y="95.802098950524751"/>
         </view>
     </objects>
 </document>

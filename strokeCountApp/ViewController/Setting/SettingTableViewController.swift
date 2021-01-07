@@ -10,7 +10,7 @@ import UIKit
 
 class SettingTableViewController: UITableViewController {
         
-    var isLowerCaseRecognaized: Bool?
+    var isLowerCaseRecognaized: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class SettingTableViewController: UITableViewController {
     //設定画面から他の画面に遷移するときの処理
     override func viewDidDisappear(_ animated: Bool) {
         print(#function)
+        print(isLowerCaseRecognaized)
         let userDefault = UserDefaults.standard
         userDefault.set(isLowerCaseRecognaized, forKey: "isLowerCaseRecognized")
         
@@ -48,6 +49,11 @@ class SettingTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as? SettingTableViewCell else{
             return UITableViewCell()
         }
+        if let switchValue = UserDefaults.standard.value(forKey: "isLowerCaseRecognized") as? Bool{
+            isLowerCaseRecognaized = switchValue
+        }
+        cell.alphabetSwitch.isOn = isLowerCaseRecognaized
+        cell.setSwitchLabel(isLowerCaseRecognaized)
         cell.delegate = self
         return cell
     }

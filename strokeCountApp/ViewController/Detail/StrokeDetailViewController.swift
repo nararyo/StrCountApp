@@ -18,17 +18,14 @@ class StrokeDetailViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var strokeCountLabel: UILabel!
+    @IBOutlet weak var countTypeLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        contentView.layer.cornerRadius = 5
-        nameLabel.text = result?.stroke?.name
-        strokeCountLabel.text = "\(String(result?.stroke?.count ?? 0))画"
-        cosmosView.rating = result?.rate ?? 0
-        descriptionLabel.text = result?.describe
+        setViews()          
     }
 }
 
@@ -46,5 +43,22 @@ extension StrokeDetailViewController {
             make.height.equalTo(self.view.frame.height)
         }
         
+    }
+    
+    func setCountTypeLabel(){
+        if result?.stroke?.isLowerCaseRecognized == true {
+            countTypeLabel.text = "(英子文字識別する)"
+        }else {
+            countTypeLabel.text = "(英子文字識別しない)"
+        }
+    }
+    
+    func setViews(){
+        contentView.layer.cornerRadius = 5
+        nameLabel.text = result?.stroke?.name
+        strokeCountLabel.text = "\(String(result?.stroke?.count ?? 0))画"
+        cosmosView.rating = result?.rate ?? 0
+        descriptionLabel.text = result?.describe
+        setCountTypeLabel()
     }
 }

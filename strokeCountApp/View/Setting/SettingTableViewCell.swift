@@ -22,11 +22,6 @@ class SettingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        if let switchValue = UserDefaults.standard.value(forKey: "isLowerCaseRecognized") as? Bool{
-            alphabetSwitch.isOn = switchValue
-        }
-        setSwitchLabel(alphabetSwitch.isOn)
     }
     
     

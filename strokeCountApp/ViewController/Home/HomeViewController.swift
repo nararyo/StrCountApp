@@ -88,7 +88,7 @@ extension HomeViewController {
     
     //画数毎の結果一覧csvを読み込む
     func loadFortune(){
-        guard let csvFilePath = Bundle.main.path(forResource: "fortune2", ofType: "csv") else {
+        guard let csvFilePath = Bundle.main.path(forResource: "fortune3", ofType: "csv") else {
             print("ファイルが存在しません")
             return
         }

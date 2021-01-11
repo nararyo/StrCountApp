@@ -31,7 +31,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Ue-4Ve">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="8" y="0.0" width="367" height="667"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
                                     <rect key="frame" x="142" y="63" width="82" height="38.5"/>

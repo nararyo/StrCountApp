@@ -36,6 +36,7 @@ class StrokeListViewController: UIViewController {
 extension StrokeListViewController {
     
     func setUpTableView(){
+        tableView.separatorColor = .init(red: 254/255, green: 200/255, blue: 74/255, alpha: 0.8)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "StrokeListTableViewCell", bundle: nil), forCellReuseIdentifier: "StrokeListTableViewCell")
@@ -78,6 +79,7 @@ extension StrokeListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.cosmosView.rating = strokeResultList?[indexPath.row].rate ?? 0
+        cell.cosmosView.settings.totalStars = Int(strokeResultList?[indexPath.row].rate ?? 0)
         cell.nameLabel.text = strokeResultList?[indexPath.row].stroke?.name
         cell.strokeCountLabel.text = "\(String(strokeResultList?[indexPath.row].stroke?.count ?? 0))画"
         return cell

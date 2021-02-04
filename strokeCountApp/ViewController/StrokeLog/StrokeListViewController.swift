@@ -101,4 +101,25 @@ extension StrokeListViewController: UITableViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            let strokeFortuneResult = realm.objects(StrokeFortuneResult.self)
+            
+            do {
+                try realm.write{
+                    realm.delete(strokeFortuneResult[indexPath.row])
+                }
+            } catch {
+                print("エラー")
+            }
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
+    
 }

@@ -32,7 +32,7 @@
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Ue-4Ve">
                             <rect key="frame" x="8" y="0.0" width="367" height="667"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
                                     <rect key="frame" x="8" y="8" width="351" height="145"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.98679226639999995" green="0.90472765354300122" blue="0.77955037986119358" alpha="0.85244541952054798" colorSpace="custom" customColorSpace="displayP3"/>
@@ -126,24 +126,39 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
                                     <rect key="frame" x="0.0" y="401" width="367" height="121"/>
-                                    <string key="text">ボス運。リーダーシップ、指導力、闘争心があり、数値、経済に強いことはもちろん、芸術面、宗教面に対する理解もあります。人柄も良さ、誠実さから目上からの引き立て、目下からの尊敬を得られます。様々な側面から物事を見る能力があることから、多方面での才能を伸ばすことによりより大きく運が開けるとともに社会への貢献度も数段に高まります。人生全般にわたり大きな失敗はないでしょう。女性は仕事も家庭も両立できる良妻賢母となります。</string>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                    <color key="textColor" red="0.2976853954" green="0.0090946677820000002" blue="0.14559444129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">ボス運。リーダーシップ、指導力、闘争心があり、数値、経済に強いことはもちろん、芸術面、宗教面に対する理解もあります。人柄も良さ、誠実さから目上からの引き立て、目下からの尊敬を得られます。様々な側面から物事を見る能力があることから、多方面での才能を伸ばすことによりより大きく運が開けるとともに社会への貢献度も数段に高まります。人生全般にわたり大きな失敗はないでしょう。女性は仕事も家庭も両立できる良妻賢母となります。</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.2976853954" green="0.0090946677820000002" blue="0.14559444129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="説明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-jx-IAb">
+                                    <rect key="frame" x="8" y="372" width="35" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.99597042800000002" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstItem="oWb-MP-oxo" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="40" id="1va-hW-twt"/>
+                                <constraint firstItem="oWb-MP-oxo" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="1va-hW-twt"/>
                                 <constraint firstItem="oWb-MP-oxo" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="32" id="6g8-aA-dQ2"/>
                                 <constraint firstItem="zXL-lT-D2B" firstAttribute="centerY" secondItem="ACa-zk-pi5" secondAttribute="centerY" id="7dD-bI-bGd"/>
                                 <constraint firstItem="ceo-Ic-M0x" firstAttribute="centerY" secondItem="6qw-Sf-6K7" secondAttribute="centerY" id="CjO-Dp-CBG"/>
                                 <constraint firstAttribute="trailing" secondItem="x2h-6D-lMA" secondAttribute="trailing" constant="32" id="NDv-T0-Zx5"/>
+                                <constraint firstItem="5Jz-jx-IAb" firstAttribute="top" secondItem="6qw-Sf-6K7" secondAttribute="bottom" constant="48" id="SSm-Bd-bHA"/>
                                 <constraint firstItem="6qw-Sf-6K7" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="WKd-qA-PdN"/>
                                 <constraint firstItem="ACa-zk-pi5" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="qW8-Xf-H1x"/>
-                                <constraint firstItem="x2h-6D-lMA" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="40" id="vFD-s8-n1V"/>
+                                <constraint firstItem="5Jz-jx-IAb" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="uwF-o4-PEH"/>
+                                <constraint firstItem="x2h-6D-lMA" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="vFD-s8-n1V"/>
                             </constraints>
                         </view>
                     </subviews>

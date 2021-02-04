@@ -100,7 +100,7 @@ extension ResultViewController {
             make.centerX.equalToSuperview()
         }
         describeLabel.snp.makeConstraints{(make) -> Void in
-            make.top.equalTo(self.cosmosView.snp.bottom).offset(36)
+            make.top.equalTo(self.cosmosView.snp.bottom).offset(80)
             make.right.left.equalToSuperview().inset(16)
             make.centerX.equalToSuperview()
         }

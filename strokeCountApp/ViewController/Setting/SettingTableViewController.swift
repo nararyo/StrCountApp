@@ -14,7 +14,6 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
@@ -33,7 +32,7 @@ class SettingTableViewController: UITableViewController {
     
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

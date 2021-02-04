@@ -15,7 +15,6 @@
                 <outlet property="countLabel" destination="zXL-lT-D2B" id="rhj-VH-6kN"/>
                 <outlet property="describeLabel" destination="cfS-r5-1vn" id="Le1-QD-szq"/>
                 <outlet property="nameLabel" destination="Jbj-SW-ZVb" id="d8y-LG-dMn"/>
-                <outlet property="noKaKuSuHaLabel" destination="x2c-43-rc0" id="OpB-TP-70l"/>
                 <outlet property="saveButton" destination="x2h-6D-lMA" id="1ab-1g-CM0"/>
                 <outlet property="scrollView" destination="KjX-b7-HDZ" id="OVW-Zh-qWv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,63 +32,23 @@
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Ue-4Ve">
                             <rect key="frame" x="8" y="0.0" width="367" height="667"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
-                                    <rect key="frame" x="142" y="63" width="82" height="38.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-SW-ZVb">
+                                    <rect key="frame" x="8" y="8" width="351" height="145"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.98679226639999995" green="0.90472765354300122" blue="0.77955037986119358" alpha="0.85244541952054798" colorSpace="custom" customColorSpace="displayP3"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                    <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="の画数は・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-43-rc0">
-                                    <rect key="frame" x="120" y="134" width="143" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-lT-D2B">
-                                    <rect key="frame" x="156" y="234" width="45" height="54"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-lT-D2B">
+                                    <rect key="frame" x="161" y="186" width="45" height="54"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                    <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-Ic-M0x" customClass="CosmosView" customModule="Cosmos">
-                                    <rect key="frame" x="79" y="313" width="199" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                            <real key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
-                                            <real key="value" value="0.0"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
-                                            <integer key="value" value="8"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                            <real key="value" value="28"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
-                                            <real key="value" value="0.0"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                            <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                            <color key="value" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="desctibe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
-                                    <rect key="frame" x="32" y="387" width="305" height="55"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-6D-lMA">
                                     <rect key="frame" x="221" y="585" width="116" height="62"/>
-                                    <color key="backgroundColor" red="0.8824839323" green="0.84985096179999997" blue="0.5647221898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.9981331229" green="0.83855730299999998" blue="0.56465315819999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="125" id="NWD-YG-tKc"/>
                                         <constraint firstAttribute="height" constant="58" id="uMA-2z-vrS"/>
@@ -122,19 +81,88 @@
                                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="CI8-Oh-6Sh"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="画数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-zk-pi5">
+                                    <rect key="frame" x="8" y="203" width="35" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Happy度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qw-Sf-6K7">
+                                    <rect key="frame" x="8" y="312" width="67" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-Ic-M0x" customClass="CosmosView" customModule="Cosmos">
+                                    <rect key="frame" x="84" y="309" width="199" height="24"/>
+                                    <color key="backgroundColor" red="0.99597042800000002" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                            <integer key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                            <real key="value" value="28"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                            <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                            <color key="value" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                            <color key="value" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                            <color key="value" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-r5-1vn">
+                                    <rect key="frame" x="0.0" y="401" width="367" height="121"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">ボス運。リーダーシップ、指導力、闘争心があり、数値、経済に強いことはもちろん、芸術面、宗教面に対する理解もあります。人柄も良さ、誠実さから目上からの引き立て、目下からの尊敬を得られます。様々な側面から物事を見る能力があることから、多方面での才能を伸ばすことによりより大きく運が開けるとともに社会への貢献度も数段に高まります。人生全般にわたり大きな失敗はないでしょう。女性は仕事も家庭も両立できる良妻賢母となります。</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.2976853954" green="0.0090946677820000002" blue="0.14559444129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="説明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-jx-IAb">
+                                    <rect key="frame" x="8" y="372" width="35" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.98019617800000003" green="0.98088949920000001" blue="0.94509381059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.99597042800000002" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstItem="x2c-43-rc0" firstAttribute="centerX" secondItem="Aga-Ue-4Ve" secondAttribute="centerX" id="1ID-D1-snI"/>
+                                <constraint firstItem="oWb-MP-oxo" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="1va-hW-twt"/>
                                 <constraint firstItem="oWb-MP-oxo" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="32" id="6g8-aA-dQ2"/>
-                                <constraint firstItem="x2c-43-rc0" firstAttribute="top" secondItem="Jbj-SW-ZVb" secondAttribute="bottom" constant="28" id="NBE-FH-4F3"/>
+                                <constraint firstItem="zXL-lT-D2B" firstAttribute="centerY" secondItem="ACa-zk-pi5" secondAttribute="centerY" id="7dD-bI-bGd"/>
+                                <constraint firstItem="ceo-Ic-M0x" firstAttribute="centerY" secondItem="6qw-Sf-6K7" secondAttribute="centerY" id="CjO-Dp-CBG"/>
                                 <constraint firstAttribute="trailing" secondItem="x2h-6D-lMA" secondAttribute="trailing" constant="32" id="NDv-T0-Zx5"/>
-                                <constraint firstAttribute="bottom" secondItem="x2h-6D-lMA" secondAttribute="bottom" constant="12" id="ULu-sl-7dR"/>
-                                <constraint firstAttribute="bottom" secondItem="oWb-MP-oxo" secondAttribute="bottom" constant="12" id="xZo-zq-oFh"/>
+                                <constraint firstItem="5Jz-jx-IAb" firstAttribute="top" secondItem="6qw-Sf-6K7" secondAttribute="bottom" constant="48" id="SSm-Bd-bHA"/>
+                                <constraint firstItem="6qw-Sf-6K7" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="WKd-qA-PdN"/>
+                                <constraint firstItem="ACa-zk-pi5" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="qW8-Xf-H1x"/>
+                                <constraint firstItem="5Jz-jx-IAb" firstAttribute="leading" secondItem="Aga-Ue-4Ve" secondAttribute="leading" constant="8" id="uwF-o4-PEH"/>
+                                <constraint firstItem="x2h-6D-lMA" firstAttribute="top" secondItem="cfS-r5-1vn" secondAttribute="bottom" constant="48" id="vFD-s8-n1V"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.8824839323" green="0.84985096179999997" blue="0.5647221898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.98679226639999995" green="0.9086940885" blue="0.68231469389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <viewLayoutGuide key="contentLayoutGuide" id="5gc-6r-dwk"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="NsT-hb-0RY"/>
                 </scrollView>

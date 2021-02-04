@@ -21,11 +21,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="13" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-fb-U1E">
-                    <rect key="frame" x="0.0" y="99" width="414" height="232"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="19" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-fb-U1E">
+                    <rect key="frame" x="0.0" y="107" width="414" height="218"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-vH-khe">
-                    <rect key="frame" x="62" y="185" width="290" height="60"/>
+                    <rect key="frame" x="62" y="186" width="290" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="290" id="1sV-gX-Jov"/>
                         <constraint firstAttribute="height" constant="60" id="Mab-ih-NAA"/>
@@ -35,13 +35,15 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEh-QG-2io">
                     <rect key="frame" x="117" y="446" width="180" height="60"/>
-                    <color key="backgroundColor" red="0.8824839323" green="0.84985096179999997" blue="0.5647221898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.98679226639999995" green="0.84303698233561641" blue="0.60121987369452057" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="B4g-vr-udl"/>
+                        <constraint firstAttribute="height" constant="60" id="B4g-vr-udl"/>
                         <constraint firstAttribute="width" constant="180" id="gCp-EF-fwh"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="結果を見る">
+                        <color key="titleColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -60,7 +62,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.99597042800000002" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="hEh-QG-2io" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BoL-Lg-A3A"/>
                 <constraint firstItem="YWL-fb-U1E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FN5-vs-z5D"/>
@@ -71,10 +73,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YWL-fb-U1E" secondAttribute="trailing" id="tp5-aT-FGh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="135.19999999999999" y="139.880059970015"/>
+            <point key="canvasLocation" x="134.78260869565219" y="139.4021739130435"/>
         </view>
     </objects>
     <resources>
-        <image name="13" width="1499" height="767"/>
+        <image name="19" width="2199" height="1147"/>
     </resources>
 </document>

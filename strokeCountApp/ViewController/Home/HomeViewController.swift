@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var validateMessageLabel: UILabel!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var toResultButton: UIButton!
     
     var strokeFortuneDataArray = [StrokeFortuneData]()
@@ -74,6 +75,12 @@ extension HomeViewController {
     
     func setLayout() {
         print(self.view.snp.top)
+//        backgroundImage.snp.makeConstraints{(make) -> Void in
+////            make.edges.equalToSuperview()
+//            make.width.equalTo(self.view.frame.size.width)
+//            make.height.equalTo(self.view.frame.size.width)
+//        }
+        
         imageView.snp.makeConstraints{(make) -> Void in
             make.width.equalTo(self.view.frame.width - 12)
             make.height.equalTo(232)

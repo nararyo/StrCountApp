@@ -22,7 +22,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var noKaKuSuHaLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var describeLabel: UILabel!
     
@@ -77,20 +76,22 @@ extension ResultViewController {
         }
         
         contentView.snp.makeConstraints{(make) -> Void in
-            make.edges.equalTo(scrollView.contentLayoutGuide).inset(12)
-            make.width.equalTo(self.view.frame.width - 24)
+            make.edges.equalTo(scrollView.contentLayoutGuide)
+            make.width.equalTo(self.view.frame.width)
             make.centerX.equalToSuperview()
             make.height.equalTo(self.view.bounds.height * 1.3)
             //make.height.equalTo(scrollView.contentLayoutGuide)
         }
         
         nameLabel.snp.makeConstraints{(make)-> Void in
-            make.top.equalToSuperview().offset(self.view.frame.height / 9)
+            make.top.equalToSuperview().offset(36)
+            make.height.equalTo(116)
+            make.width.equalToSuperview().inset(12)
             make.centerX.equalToSuperview()
         }
         
         countLabel.snp.makeConstraints{(make) -> Void in
-            make.top.equalTo(nameLabel.snp.bottom).offset(108)
+            make.top.equalTo(nameLabel.snp.bottom).offset(64)
             
             make.centerX.equalToSuperview()
         }
@@ -99,7 +100,7 @@ extension ResultViewController {
             make.centerX.equalToSuperview()
         }
         describeLabel.snp.makeConstraints{(make) -> Void in
-            make.top.equalTo(self.cosmosView.snp.bottom).offset(36)
+            make.top.equalTo(self.cosmosView.snp.bottom).offset(80)
             make.right.left.equalToSuperview().inset(16)
             make.centerX.equalToSuperview()
         }
@@ -107,6 +108,8 @@ extension ResultViewController {
     
     func setContentsProperty(){
         contentView.layer.cornerRadius = 5
+        nameLabel.layer.cornerRadius = 5
+        cosmosView.settings.totalStars = Int(strokeFortuneResult?.rate ?? 1)
         
         saveButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         saveButton.layer.shadowOpacity = 0.3

@@ -16,9 +16,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q16-eX-vqB" customClass="CosmosView" customModule="Cosmos">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q16-eX-vqB" customClass="CosmosView" customModule="Cosmos">
                         <rect key="frame" x="216" y="22.5" width="100" height="15"/>
-                        <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.98459949479999997" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="h1J-B4-sAE"/>
                         </constraints>
@@ -47,6 +47,12 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                 <real key="value" value="15"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                <color key="value" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                <color key="value" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoX-DW-bk7">
@@ -55,7 +61,7 @@
                             <constraint firstAttribute="height" constant="36" id="0OF-OE-d5h"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                        <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -69,11 +75,11 @@
                             <constraint firstAttribute="width" constant="42" id="eK0-h0-gxB"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.24148714539999999" green="0.18386581539999999" blue="0.47845655679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.40547410099999998" green="0.012164223030000001" blue="0.19570883280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.9802182317" green="0.98083418609999995" blue="0.94901591539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" red="0.99597042800000002" green="0.9804465175" blue="0.97647041079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstItem="NoX-DW-bk7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5mZ-QU-Kuy"/>
                     <constraint firstItem="NoX-DW-bk7" firstAttribute="centerY" secondItem="q16-eX-vqB" secondAttribute="centerY" id="Hha-yY-THq"/>

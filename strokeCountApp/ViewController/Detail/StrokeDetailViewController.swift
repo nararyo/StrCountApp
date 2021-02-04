@@ -58,6 +58,7 @@ extension StrokeDetailViewController {
         nameLabel.text = result?.stroke?.name
         strokeCountLabel.text = "\(String(result?.stroke?.count ?? 0))画"
         cosmosView.rating = result?.rate ?? 0
+        cosmosView.settings.totalStars = Int(result?.rate ?? 0)
         descriptionLabel.text = result?.describe
         setCountTypeLabel()
     }

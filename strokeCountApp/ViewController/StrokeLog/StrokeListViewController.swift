@@ -36,6 +36,7 @@ class StrokeListViewController: UIViewController {
 extension StrokeListViewController {
     
     func setUpTableView(){
+        tableView.separatorColor = .init(red: 254/255, green: 200/255, blue: 74/255, alpha: 0.8)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "StrokeListTableViewCell", bundle: nil), forCellReuseIdentifier: "StrokeListTableViewCell")
@@ -78,6 +79,7 @@ extension StrokeListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.cosmosView.rating = strokeResultList?[indexPath.row].rate ?? 0
+        cell.cosmosView.settings.totalStars = Int(strokeResultList?[indexPath.row].rate ?? 0)
         cell.nameLabel.text = strokeResultList?[indexPath.row].stroke?.name
         cell.strokeCountLabel.text = "\(String(strokeResultList?[indexPath.row].stroke?.count ?? 0))画"
         return cell
@@ -97,6 +99,27 @@ extension StrokeListViewController: UITableViewDelegate {
         let vc = StrokeDetailViewController()
         vc.result = strokeResultList?[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            let strokeFortuneResult = realm.objects(StrokeFortuneResult.self)
+            
+            do {
+                try realm.write{
+                    realm.delete(strokeFortuneResult[indexPath.row])
+                }
+            } catch {
+                print("エラー")
+            }
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
     }
     
 }
